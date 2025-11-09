@@ -1,177 +1,185 @@
 # Kazi-Connect
 
-Kazi-Connect is Kenya's premier job portal, designed to connect talented professionals with top employers across the country. This platform aims to streamline the job search and recruitment process, making it easier for both job seekers and employers to find the right match.
+**Kazi-Connect** is Kenya's premier job portal, designed to connect talented professionals with top employers across the country. This platform streamlines the job search and recruitment process, making it easier for both job seekers and employers.
 
-## Features and Functionality
+---
 
-*   **Job Listings:** Browse and search for job opportunities across various industries and locations in Kenya.
-*   **User Authentication:** Secure login and registration for job seekers and employers, managed by Supabase.
-*   **Profile Management:** Create and manage professional profiles, highlighting skills and experience.
-*   **Employer Portal:** Post job listings, manage applications, and connect with potential candidates.
-*   **Payment Integration:** Secure payment processing for job postings via Stripe (implemented as a Supabase Function).
-*   **Responsive Design:** Accessible and user-friendly on various devices.
-*   **Toasts:** Provides user feedback using "sonner" and `@radix-ui/react-toast`.
-*   **UI Components:** Leverages the "shadcn/ui" library for consistent and accessible UI elements.
+## 🌐 Live Demo
 
-## Technology Stack
+Experience Kazi-Connect live:  
+👉 [Visit the Live Site](#)  
+*(Replace `#` with the actual live link when available)*
 
-*   **Frontend:**
-    *   React
-    *   TypeScript
-    *   Vite
-    *   React Router
-    *   Tailwind CSS
-    *   shadcn/ui
-    *   lucide-react
-    *   @tanstack/react-query
-    *   sonner
-    *   embla-carousel-react
-    *   input-otp
+---
 
-*   **Backend & Database:**
-    *   Supabase (Authentication, Database)
-    *   Supabase Functions (Stripe Integration)
-    *   PostgreSQL
+## ✨ Features & Functionality
 
-*   **Payment Processing:**
-    *   Stripe
+- **Job Listings**: Browse and search for job opportunities across various industries and locations.
+- **User Authentication**: Secure login and registration for job seekers and employers, managed by Supabase.
+- **Profile Management**: Create and manage professional profiles, highlighting skills and experience.
+- **Employer Portal**: Post job listings, manage applications, and connect with possible candidates.
+- **Payment Integration**: Secure payment processing for job postings via Stripe (implemented as a Supabase Function).
+- **Responsive Design**: Optimized for all device sizes.
+- **Toasts**: Feedback with "sonner" and `@radix-ui/react-toast`.
+- **UI Components**: Consistent, accessible elements via "shadcn/ui".
 
-## Prerequisites
+---
 
-Before you begin, ensure you have the following installed:
+## 🛠️ Technology Stack
 
-*   [Node.js](https://nodejs.org/) (v16 or higher)
-*   [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
-*   [Vite](https://vitejs.dev/)
-*   [Supabase CLI](https://supabase.com/docs/guides/cli/getting-started) (Optional, if developing Supabase Functions locally)
-*   A Stripe account and API keys.
+**Frontend**
+- React
+- TypeScript
+- Vite
+- React Router
+- Tailwind CSS
+- shadcn/ui
+- lucide-react
+- @tanstack/react-query
+- sonner
+- embla-carousel-react
+- input-otp
 
-Also, ensure you have a Supabase project set up and the required environment variables configured. These variables include:
+**Backend & Database**
+- Supabase (Authentication, Database)
+- Supabase Functions (Stripe Integration)
+- PostgreSQL
 
-*   `VITE_SUPABASE_URL`: The URL of your Supabase project.
-*   `VITE_SUPABASE_PUBLISHABLE_KEY`: The public API key for your Supabase project.
-*   `STRIPE_SECRET_KEY`  (for Supabase function): Your Stripe Secret API key.
+**Payment Processing**
+- Stripe
 
-## Installation Instructions
+---
 
-1.  **Clone the repository:**
+## ⚡ Prerequisites
 
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v16 or higher)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+- [Vite](https://vitejs.dev/)
+- [Supabase CLI](https://supabase.com/docs/guides/cli/getting-started) *(Optional, for Supabase Functions)*
+- Stripe account & API keys
+
+Required environment variables:
+
+- `VITE_SUPABASE_URL`: The URL of your Supabase project
+- `VITE_SUPABASE_PUBLISHABLE_KEY`: Public API key for Supabase
+- `STRIPE_SECRET_KEY` *(for Supabase function)*: Your Stripe Secret API key
+
+---
+
+## 🚀 Installation
+
+1. **Clone the repository:**
     ```bash
     git clone https://github.com/Einsteinke-hub/Kazi-Connect.git
     cd Kazi-Connect
     ```
 
-2.  **Install dependencies:**
-
+2. **Install dependencies:**
     ```bash
     npm install # or yarn install
     ```
 
-3.  **Configure environment variables:**
-
-    Create a `.env` file in the root directory and add your Supabase and (optionally) Paystack keys:
-
+3. **Configure environment variables:**
+    Create a `.env` file and add your keys:
     ```
     VITE_SUPABASE_URL=<YOUR_SUPABASE_URL>
     VITE_SUPABASE_PUBLISHABLE_KEY=<YOUR_SUPABASE_ANON_KEY>
     ```
 
-    Alternatively, set the environment variables directly in your system.
-
-4.  **Initialize Supabase:**
-
-    If you haven't already, initialize your Supabase project and link it to your local development environment:
-
+4. **Initialize Supabase:**
     ```bash
     supabase init
     supabase link --project-ref <YOUR_PROJECT_REF>
     ```
-
     Replace `<YOUR_PROJECT_REF>` with your Supabase project reference ID.
 
-5. **Deploy Supabase function (create-payment):**
-
-    Navigate to the `supabase/functions/create-payment` directory
-
+5. **Deploy Supabase function (`create-payment`):**
     ```bash
     cd supabase/functions/create-payment
-    ```
-
-    Set the Stripe Secret Key (STRIPE_SECRET_KEY) as a secret in Supabase:
-
-    ```bash
     supabase secrets set STRIPE_SECRET_KEY="YOUR_STRIPE_SECRET_KEY"
-    ```
-
-    Deploy the function:
-
-    ```bash
     supabase functions deploy create-payment
     ```
 
-6.  **Start the development server:**
-
+6. **Start the development server:**
     ```bash
     npm run dev # or yarn dev
     ```
+    App will be live at `http://localhost:5173`
 
-    This will start the Vite development server, typically at `http://localhost:5173`.
+---
 
-## Usage Guide
+## 📖 Usage Guide
 
-1.  **Access the application:**
+1. **Access the application:**  
+   Open your browser and navigate to `http://localhost:5173`.
 
-    Open your browser and navigate to the address provided by the development server (e.g., `http://localhost:5173`).
+2. **Register & Login:**  
+   New users register as job seekers or employers. Existing users log in to access features.
 
-2.  **User Registration and Login:**
+3. **Search for Jobs:**  
+   Use the homepage search bar or `/jobs` to find listings. Filter by keyword, location, job type, etc.
 
-    *   New users can register as either a job seeker or an employer.
-    *   Existing users can log in to access their profiles and features.
+4. **Profile Management:**  
+   - Job seekers manage professional profiles.
+   - Employers manage company info.
 
-3.  **Job Searching:**
+5. **Post a Job (Employers):**  
+   - Log in as employer.
+   - Go to `/post-job`.
+   - Fill out the posting form and submit.
+   - Pay the $10 Stripe fee to activate the post.
 
-    *   Use the search bar on the homepage or the dedicated `/jobs` page to find job listings.
-    *   Filter jobs by keyword, location, job type, and other criteria.
+---
 
-4.  **Profile Management:**
+## 🔌 API & Integrations
 
-    *   Job seekers can create and manage their professional profiles.
-    *   Employers can manage their company information.
+Kazi-Connect leverages Supabase for its backend, authentication, and database, with a Supabase Edge Function powering Stripe payments.
 
-5.  **Posting Jobs (Employers):**
+- [Supabase Docs](https://supabase.com/docs)
+- [Stripe API Docs](https://stripe.com/docs/api)
+- **Supabase Function `create-payment`:** Logic in `supabase/functions/create-payment/index.ts`
 
-    *   Log in with an employer account.
-    *   Navigate to the `/post-job` page.
-    *   Fill out the job posting form and submit.
-    *   Pay the $10 listing fee via Stripe to activate the job posting.
+---
 
-## API Documentation
+## 🤝 Contributing
 
-This project utilizes Supabase for its backend and database, and also makes use of a Supabase Edge Function for the creation of Stripe payment sessions. As such there is no traditional API to document. You can refer to the following resources for integration specifics:
+We welcome contributions!  
+Just follow these steps:
 
-*   **Supabase Documentation:** [https://supabase.com/docs](https://supabase.com/docs)
-*   **Stripe API Documentation:** [https://stripe.com/docs/api](https://stripe.com/docs/api)
-*   **Supabase Function `create-payment`:**  The `supabase/functions/create-payment/index.ts` file contains the logic for the stripe payment integration.
+1. Fork this repo.
+2. Create a new branch:  
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Make your changes and commit:  
+   ```bash
+   git commit -m "Your descriptive commit message"
+   ```
+4. Push your branch:  
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. Open a pull request targeting `main`.
 
-## Contributing Guidelines
+Please ensure code quality matches our existing standards with appropriate tests.
 
-Contributions are welcome! To contribute to Kazi-Connect, follow these steps:
+---
 
-1.  Fork the repository.
-2.  Create a new branch for your feature or bug fix: `git checkout -b feature/your-feature-name`
-3.  Make your changes and commit them: `git commit -m "Add your descriptive commit message"`
-4.  Push to your branch: `git push origin feature/your-feature-name`
-5.  Create a pull request to the `main` branch.
+## 📜 License
 
-Please ensure your code follows the existing style guidelines and includes appropriate tests.
+This project does **not** have a specified license.  
+All rights reserved by the copyright holders.
 
-## License Information
+---
 
-This project has no specified license.  All rights are reserved by the copyright holders.
-## Contact/Support Information
+## 📬 Contact & Support
 
-For questions, bug reports, or feature requests, please contact:
+For questions, bug reports, or feature requests:
 
-*   Email: einstenmarto30@gmail.com
-*   Phone: +254 759 136 851
-*   Address: Nairobi, Kenya
+- **Email:** einstenmarto30@gmail.com
+- **Phone:** +254 759 136 851
+- **Address:** Nairobi, Kenya
+
+---
