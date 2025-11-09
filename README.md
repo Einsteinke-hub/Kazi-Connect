@@ -7,7 +7,7 @@
 ## 🌐 Live Demo
 
 Experience Kazi-Connect live:  
-👉 [Visit the Live Site]((https://einsteinke-hub.github.io/Kazi-Connect/))  
+👉 [Visit the Live Site](https://einsteinke-hub.github.io/Kazi-Connect/)  
 
 
 ---
