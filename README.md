@@ -7,8 +7,8 @@
 ## 🌐 Live Demo
 
 Experience Kazi-Connect live:  
-👉 [Visit the Live Site](#)  
-*(Replace `#` with the actual live link when available)*
+👉 [Visit the Live Site]((https://einsteinke-hub.github.io/Kazi-Connect/))  
+
 
 ---
 
