@@ -33,11 +33,6 @@ const Footer = () => {
                   Create Profile
                 </Link>
               </li>
-              <li>
-                <Link to="/career-advice" className="hover:text-primary-foreground transition-smooth">
-                  Career Advice
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -50,16 +45,6 @@ const Footer = () => {
                   Post a Job
                 </Link>
               </li>
-              <li>
-                <Link to="/pricing" className="hover:text-primary-foreground transition-smooth">
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link to="/employer-resources" className="hover:text-primary-foreground transition-smooth">
-                  Resources
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -69,11 +54,11 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>info@kaziconnect.co.ke</span>
+                <span>einstenmarto30@gmail.com</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span>+254 700 000 000</span>
+                <span>+254 759 136 851</span>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
