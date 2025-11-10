@@ -13,14 +13,7 @@ export default defineConfig(({ mode }) => ({
     react(), 
     mode === "development" && componentTagger()
   ].filter(Boolean),
-  // Dynamic base URL for different platforms
-  base: process.env.NODE_ENV === 'production' 
-    ? process.env.VERCEL 
-      ? '/' 
-      : process.env.NETLIFY 
-        ? '/' 
-        : '/Kazi-Connect/'
-    : '/',
+  base: '/Kazi-Connect/', // Use absolute path for GitHub Pages
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

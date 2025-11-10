@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Einsteinke-hub.github.io/Kazi-Connect",
+  "homepage": "https://einsteinke-hub.github.io/Kazi-Connect",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,9 +11,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "vercel-build": "vite build",
-    "netlify-build": "vite build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
